@@ -35,24 +35,23 @@ These signals were used to estimate variables of the feature vector for each pat
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values.
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+* mean(): Mean value
+* std(): Standard deviation
+* mad(): Median absolute deviation 
+* max(): Largest value in array
+* min(): Smallest value in array
+* sma(): Signal magnitude area
+* energy(): Energy measure. Sum of the squares divided by the number of values.
+* iqr(): Interquartile range 
+* entropy(): Signal entropy
+* arCoeff(): Autorregresion coefficients with Burg order equal to 4
+* correlation(): correlation coefficient between two signals
+* maxInds(): index of the frequency component with largest magnitude
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+* skewness(): skewness of the frequency domain signal 
+* kurtosis(): kurtosis of the frequency domain signal 
+* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+* angle(): Angle between to vectors.
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
@@ -64,8 +63,78 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 
 The complete list of variables of each feature vector is available in 'features.txt'
 
+## Mapping original variables to tidydata variables
+###        Original Name		        Tidydata Variable
+*	tBodyAcc-mean()-X	   ==>   	BodyAccelerationMeanX
+*	tBodyAcc-mean()-Y	   ==>   	BodyAccelerationMeanY
+*	tBodyAcc-mean()-Z	   ==>   	BodyAccelerationMeanZ
+*	tBodyAcc-std()-X	   ==>   	BodyAccelerationStdX
+*	tBodyAcc-std()-Y	   ==>   	BodyAccelerationStdY
+*	tBodyAcc-std()-Z	   ==>   	BodyAccelerationStdZ
+*	tGravityAcc-mean()-X	   ==>   	GravityAccelerationMeanX
+*	tGravityAcc-mean()-Y	   ==>   	GravityAccelerationMeanY
+*	tGravityAcc-mean()-Z	   ==>   	GravityAccelerationMeanZ
+*	tGravityAcc-std()-X	   ==>   	GravityAccelerationStdX
+*	tGravityAcc-std()-Y	   ==>   	GravityAccelerationStdY
+*	tGravityAcc-std()-Z	   ==>   	GravityAccelerationStdZ
+*	tBodyAccJerk-mean()-X	   ==>   	BodyAccelerometerJerkMeanX
+*	tBodyAccJerk-mean()-Y	   ==>   	BodyAccelerometerJerkMeanY
+*	tBodyAccJerk-mean()-Z	   ==>   	BodyAccelerometerJerkMeanZ
+*	tBodyAccJerk-std()-X	   ==>   	BodyAccelerometerJerkStdX
+*	tBodyAccJerk-std()-Y	   ==>   	BodyAccelerometerJerkStdY
+*	tBodyAccJerk-std()-Z	   ==>   	BodyAccelerometerJerkStdZ
+*	tBodyGyro-mean()-X	   ==>   	BodyGyroMeanX
+*	tBodyGyro-mean()-Y	   ==>   	BodyGyroMeanY
+*	tBodyGyro-mean()-Z	   ==>   	BodyGyroMeanZ
+*	tBodyGyro-std()-X	   ==>   	BodyGyroStdX
+*	tBodyGyro-std()-Y	   ==>   	BodyGyroStdY
+*	tBodyGyro-std()-Z	   ==>   	BodyGyroStdZ
+*	tBodyGyroJerk-mean()-X	   ==>   	BodyGyroAccelerometerJerkMeanX
+*	tBodyGyroJerk-mean()-Y	   ==>   	BodyGyroAccelerometerJerkMeanY
+*	tBodyGyroJerk-mean()-Z	   ==>   	BodyGyroAccelerometerJerkMeanZ
+*	tBodyGyroJerk-std()-X	   ==>   	BodyGyroAccelerometerJerkStdX
+*	tBodyGyroJerk-std()-Y	   ==>   	BodyGyroAccelerometerJerkStdY
+*	tBodyGyroJerk-std()-Z	   ==>   	BodyGyroAccelerometerJerkStdZ
+*	tBodyAccMag-mean()	   ==>   	BodyAccelerationMagnitudeMean
+*	tBodyAccMag-std()	   ==>   	BodyAccelerationMagnitudeStd
+*	tGravityAccMag-mean()	   ==>   	GravityAccelerationMagnitudeMean
+*	tGravityAccMag-std()	   ==>   	GravityAccelerationMagnitudeStd
+*	tBodyAccJerkMag-mean()	   ==>   	BodyAccelerometerJerkMagnitudeMean
+*	tBodyAccJerkMag-std()	   ==>   	BodyAccelerometerJerkMagnitudeStd
+*	tBodyGyroMag-mean()	   ==>   	BodyGyroMagnitudeMean
+*	tBodyGyroMag-std()	   ==>   	BodyGyroMagnitudeStd
+*	tBodyGyroJerkMag-mean()	   ==>   	BodyGyroAccelerometerJerkMagnitudeMean
+*	tBodyGyroJerkMag-std()	   ==>   	BodyGyroAccelerometerJerkMagnitudeStd
+*	fBodyAcc-mean()-X	   ==>   	FFTBodyAccelerationMeanX
+*	fBodyAcc-mean()-Y	   ==>   	FFTBodyAccelerationMeanY
+*	fBodyAcc-mean()-Z	   ==>   	FFTBodyAccelerationMeanZ
+*	fBodyAcc-std()-X	   ==>   	FFTBodyAccelerationStdX
+*	fBodyAcc-std()-Y	   ==>   	FFTBodyAccelerationStdY
+*	fBodyAcc-std()-Z	   ==>   	FFTBodyAccelerationStdZ
+*	fBodyAccJerk-mean()-X	   ==>   	FFTBodyAccelerometerJerkMeanX
+*	fBodyAccJerk-mean()-Y	   ==>   	FFTBodyAccelerometerJerkMeanY
+*	fBodyAccJerk-mean()-Z	   ==>   	FFTBodyAccelerometerJerkMeanZ
+*	fBodyAccJerk-std()-X	   ==>   	FFTBodyAccelerometerJerkStdX
+*	fBodyAccJerk-std()-Y	   ==>   	FFTBodyAccelerometerJerkStdY
+*	fBodyAccJerk-std()-Z	   ==>   	FFTBodyAccelerometerJerkStdZ
+*	fBodyGyro-mean()-X	   ==>   	FFTBodyGyroMeanX
+*	fBodyGyro-mean()-Y	   ==>   	FFTBodyGyroMeanY
+*	fBodyGyro-mean()-Z	   ==>   	FFTBodyGyroMeanZ
+*	fBodyGyro-std()-X	   ==>   	FFTBodyGyroStdX
+*	fBodyGyro-std()-Y	   ==>   	FFTBodyGyroStdY
+*	fBodyGyro-std()-Z	   ==>   	FFTBodyGyroStdZ
+*	fBodyAccMag-mean()	   ==>   	FFTBodyAccelerationMagnitudeMean
+*	fBodyAccMag-std()	   ==>   	FFTBodyAccelerationMagnitudeStd
+*	angle(tBodyAccMean,gravity)	   ==>   	AngleBodyAccelerationMean
+*	angle(tBodyAccJerkMean),gravityMean)	   ==>   	AngleBodyAccelerometerJerkMean
+*	angle(tBodyGyroMean,gravityMean)	   ==>   	AngleBodyGyroMean
+*	angle(tBodyGyroJerkMean,gravityMean)	   ==>   	AngleBodyGyroAccelerometerJerkMean
+*	angle(X,gravityMean)	   ==>   	AngleX
+*	angle(Y,gravityMean)	   ==>   	AngleY
+*	angle(Z,gravityMean)	   ==>   	AngleZ
+
 ## Variable dropped during analysis
-        Name
+###        Names
 *	tBodyAcc-mad()-X
 *	tBodyAcc-mad()-Y
 *	tBodyAcc-mad()-Z
