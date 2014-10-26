@@ -28,15 +28,16 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+These signals were used to estimate variables of the feature vector for each 
+pattern '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 -----------------------------
 ## Tidydata.txt fields
-Using the feature above the tidydata.txt focus on the means and standardard deviation for the time-based variables.  In addition we have retained means and STD for the magnitudes, relevant FFT variables and angular mearsurement (where they appeat to be relevant)
+Using the feature above the tidydata.txt focus on the means and standardard deviation for the time-based variables.  In addition we have retained means and STD for the magnitudes, relevant FFT variables and angular mearsurement (where they appeat to be relevant).  Given the length of the variables names CamelCase was used to improve readability.  
 
 ### Grouping variables subjects and activities
 *       subjects
 *	activities
+
 ### Time-based variables by 3-dimensional axis
 *	BodyAccelerationMeanX
 *	BodyAccelerationMeanY
@@ -68,6 +69,7 @@ Using the feature above the tidydata.txt focus on the means and standardard devi
 *	BodyGyroAccelerometerJerkStdX
 *	BodyGyroAccelerometerJerkStdY
 *	BodyGyroAccelerometerJerkStdZ
+
 ### Time-based variables magnitudes
 *	BodyAccelerationMagnitudeMean
 *	BodyAccelerationMagnitudeStd
@@ -79,6 +81,7 @@ Using the feature above the tidydata.txt focus on the means and standardard devi
 *	BodyGyroMagnitudeStd
 *	BodyGyroAccelerometerJerkMagnitudeMean
 *	BodyGyroAccelerometerJerkMagnitudeStd
+
 ### Fourier transformation of time-base variablesby 3-dimensional axis
 *	FFTBodyAccelerationMeanX
 *	FFTBodyAccelerationMeanY
@@ -100,6 +103,7 @@ Using the feature above the tidydata.txt focus on the means and standardard devi
 *	FFTBodyGyroStdZ
 *	FFTBodyAccelerationMagnitudeMean
 *	FFTBodyAccelerationMagnitudeStd
+
 ### Angular measurements 
 *	AngleBodyAccelerationMean
 *	AngleBodyAccelerometerJerkMean
