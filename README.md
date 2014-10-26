@@ -2,7 +2,6 @@
 title: "README.MD"
 author: "Herman crank"
 date: "Sunday, October 26, 2014"
-output: html_document
 ---
 Getting and Cleaning Data
 ==========================
