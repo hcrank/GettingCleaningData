@@ -139,4 +139,3 @@ tidydata <- f2[,lapply(.SD, mean), by=key(f2)]
 
 ## Write out tidy data set
 write.table(tidydata,"tidydata.txt", row.names = FALSE)
-
